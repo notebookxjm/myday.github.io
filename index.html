@@ -229,6 +229,436 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/note_one/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/19/note_one/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T09:59:51+08:00">
+                2018-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="title-学习笔记（小甲鱼）"><a href="#title-学习笔记（小甲鱼）" class="headerlink" title="title:  学习笔记（小甲鱼）"></a>title:  学习笔记（小甲鱼）</h2><p>安装 EasyGUI</p>
+<p>下载安装包<br>官网：<a href="https://github.com/robertlugg/easygui" target="_blank" rel="noopener">https://github.com/robertlugg/easygui</a></p>
+<p>然后打开cmd,用cd 命令进入到easygui的下载地址，python setup.py.install (“已经配置好了环境变量”)</p>
+<p>easygui就会安装在这个地址<br>C:\Python27\Lib\site-packages\easygui-0.98.1-py2.7.egg</p>
+<p>导入 EasyGUI<br>有3种导入方式，而且调用函数的方式也不一样</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import easygui<br>easygui.msgbox(“hello”)   #调用函数<br>‘OK’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from easygui import *<br>msgbox(‘hello’)<br>‘OK’<br>如果用第一种调用方式会出错<br>NameError: name ‘easygui’ is not defined</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import easygui as g  （推荐）<br>g.msgbox(‘hello’)<br>‘OK’<br>如果用第一种调用方式会出错<br>NameError: name ‘easygui’ is not defined</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/note_three/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/19/note_three/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T09:45:16+08:00">
+                2018-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="title-学习笔记（小甲鱼）"><a href="#title-学习笔记（小甲鱼）" class="headerlink" title="title: 学习笔记（小甲鱼）"></a>title: 学习笔记（小甲鱼）</h2><p>#异常检测try</p>
+<p>#try:</p>
+<pre><code>#检测内容
+</code></pre><p>#except exception[as reason]:</p>
+<pre><code>#出现异常后处理的代码
+</code></pre><p>#finally:</p>
+<pre><code>#必须被执行的语句
+</code></pre><p>#制作异常</p>
+<p>#raise TypeError</p>
+<p>#raise TypeError(‘类型错误’)</p>
+<p>#f=open(“E:\dee.txt”)     #文件名不存在</p>
+<p>#print(f.read())</p>
+<p>#f.close()</p>
+<p>#FileNotFoundError: [Errno 2] No such file or directory: ‘E:\dee.txt’</p>
+<p>try:</p>
+<pre><code>f=open(&quot;E:\\dee.txt&quot;,&apos;w&apos;)
+print(f.write(&apos;hello&apos;))
+a=&apos;i&apos;+1
+f.close()
+</code></pre><p>except OSError as reason:<br>    print(‘文件出错’+str(reason))<br>except TypeError as reason:<br>    print(‘文件出错’+str(reason))<br>finally:<br>    f.close()</p>
+<p>#如果try里面的异常没有出现在except里面，会报错</p>
+<p>#先遇到那个异常，那么就会跳到相应的except去执行，其他的就不会执行了</p>
+<p>#finally后面的语句，无论try中有没有异常，都会执行。</p>
+<p>#except 后边如果不带任何异常类，Python 会捕获所有（try 语句块内）的异常并统一处理</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/note_two/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/19/note_two/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T09:43:02+08:00">
+                2018-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="title-学习笔记"><a href="#title-学习笔记" class="headerlink" title="title: 学习笔记"></a>title: 学习笔记</h2><p>获取电量<br>adb shell dumpsys battery<br>level 就是所需要的电量值</p>
+<p>切换非充电状态<br>adb shell dumpsys battery set status 1</p>
+<p>隔一段时间采取电量值，测试完成之后作差</p>
+<p>获取内存</p>
+<p>得到进程的信息，还有所占内存（虚存和实存）<br>adb shell top</p>
+<p>adb shell top -d 1 &gt; file<br>-d 数据采集的频率 file 可以把得到的数据保存到这个文件里</p>
+<p>cat file<br>打开文件</p>
+<p>cat file | grep 所测APP的的package<br>过滤，只得到所测app的数据</p>
+<p>隔段时间就取值，画成折线图，观察其变化</p>
+<p>FPS和过度渲染</p>
+<p>FPS：衡量流畅度，每秒多少帧<br>过度渲染：描述的是屏幕上的某个像素在同一帧的时间内被描述了多少次</p>
+<p>FPS<br>打开手机的开发者选项-&gt;GPU呈现模式分析</p>
+<p>在手机下方会出现柱状图<br>根据对手机操作，柱状图会变化，有一根绿线做参照，超过绿线越多，就越卡</p>
+<p>过度渲染<br>也在手机的开发者选项里-&gt;GPU过度绘制</p>
+<p>会出现不同的颜色，颜色越深，被描述的次数越多，就是一层一层的叠加</p>
+<p>启动时间<br>冷启动：第一次启动<br>热启动：已经打开过app，使用home键或back键，app还在后台运行，然后再打开</p>
+<p>启动app<br>adb shell am start -W -n package/activity</p>
+<p>停止app命令<br>adb shell am force-stop package #冷启动<br>adb shell input keyevent 3      #热启动<br>相当于按back键</p>
+<p>获得package和activity<br>adb logcat | grep START</p>
+<p>ThisTime 就是所需的耗时</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/note/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -510,7 +940,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
