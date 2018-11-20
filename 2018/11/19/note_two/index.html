@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="获取电量adb shell dumpsys batterylevel 就是所需要的电量值 切换非充电状态adb shell dumpsys battery set status 1 隔一段时间采取电量值，测试完成之后作差 获取内存 得到进程的信息，还有所占内存（虚存和实存）adb shell top adb shell top -d 1 &amp;gt; file-d 数据采集的频率 file 可以把得到">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-19T04:36:31.869Z">
+<meta property="og:updated_time" content="2018-11-20T09:15:26.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记">
 <meta name="twitter:description" content="获取电量adb shell dumpsys batterylevel 就是所需要的电量值 切换非充电状态adb shell dumpsys battery set status 1 隔一段时间采取电量值，测试完成之后作差 获取内存 得到进程的信息，还有所占内存（虚存和实存）adb shell top adb shell top -d 1 &amp;gt; file-d 数据采集的频率 file 可以把得到">
@@ -305,8 +305,7 @@
 <p>获取内存</p>
 <p>得到进程的信息，还有所占内存（虚存和实存）<br>adb shell top</p>
 <p>adb shell top -d 1 &gt; file<br>-d 数据采集的频率 file 可以把得到的数据保存到这个文件里</p>
-<p>cat file<br>打开文件</p>
-<p>cat file | grep 所测APP的的package<br>过滤，只得到所测app的数据</p>
+<p>type file<br>打开文件</p>
 <p>隔段时间就取值，画成折线图，观察其变化</p>
 <p>FPS和过度渲染</p>
 <p>FPS：衡量流畅度，每秒多少帧<br>过度渲染：描述的是屏幕上的某个像素在同一帧的时间内被描述了多少次</p>
