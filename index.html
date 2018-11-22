@@ -229,6 +229,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/gg/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/21/gg/" itemprop="url">EasyGUI学习笔记2（小甲鱼）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-21T18:19:54+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>import easygui as g<br>g.msgbox(‘你好’,’hello’)<br>可以指定标题参数和消息参数,你好是消息，hello是标题</p>
+<p>使用关键字参数调用 EasyGUI 的函数</p>
+<p>‘’’<br>choice=[‘愿意’,’不愿意’]<br>replay=g.choicebox(‘你要买衣服吗’,choices=choice)</p>
+<p>‘’’</p>
+<p>使用按钮组件<br>msgbox()<br>msgbox(msg=’(Your message goes here)’, title=’ ‘, ok_button=’OK’, image=None, root=None)<br>g.msgbox(“面朝大海，春暖花开”,ok_button=’好诗’)</p>
+<p>ccbox()<br>ccbox(msg=’Shall I continue?’, title=’ ‘, choices=(‘C[o]ntinue’, ‘C[a]ncel’), image=None, default_choice=’C[o]ntinue’, cancel_choice=’C[a]ncel’)<br>ccbox() 提供一个选择：“C[o]ntinue” 或者 “C[a]ncel”，并相应的返回 True 或者 False。<br>g.ccbox(‘还要继续吗’,’选择’) #只能有2个选择</p>
+<p>ynbox()<br>ynbox(msg=’Shall I continue?’, title=’ ‘, choices=(‘[<f1>]Yes’, ‘[<f2>]No’), image=None, default_choice=’[<f1>]Yes’, cancel_choice=’[<f2>]No’)<br>跟 ccbox() 一样，只不过这里默认的 choices 参数值不同而已，[<f1>] 表示将键盘上的 F1 功能按键作为 “Yes” 的快捷键使用。<br>g.ynbox(‘还要继续吗’,’选择’) #只能有2个选择</f1></f2></f1></f2></f1></p>
+<p>buttonbox()<br>buttonbox(msg=’’, title=’ ‘, choices=(‘Button[1]’, ‘Button[2]’, ‘Button[3]’), image=None, images=None, default_choice=None, cancel_choice=None, callback=None, run=True)<br>可以使用 buttonbox() 定义自己的一组按钮，buttonbox() 会显示一组由你自定义的按钮。<br>当用户点击任意一个按钮的时候，buttonbox() 返回按钮的文本内容。<br>如果用户点击取消或者关闭窗口，那么会返回默认选项（第一个选项）。<br>g.buttonbox(“你的爱好”,choices=(‘sing’,’dance’,’running’,’shopping’)) #可以有多个选择</p>
+<p>indexbox()<br>indexbox(msg=’Shall I continue?’, title=’ ‘, choices=(‘Yes’, ‘No’), image=None, default_choice=’Yes’, cancel_choice=’No’)<br>基本跟 buttonbox() 一样，区别就是当用户选择第一个按钮的时候返回序号 0， 选择第二个按钮的时候返回序号 1，选择第三个按钮，返回2。<br>g.indexbox(‘还要继续吗’,’选择’,choices=(‘嗯’,’不’,’考虑’)) #可以有多个选择</p>
+<p>boolbox()<br>boolbox(msg=’Shall I continue?’, title=’ ‘, choices=(‘[Y]es’, ‘[N]o’), image=None, default_choice=’Yes’, cancel_choice=’No’)<br>如果第一个按钮被选中则返回 True，否则返回 False。<br>g.boolbox(‘还要继续吗’,’选择’,choices=(‘嗯’,’不’))#只能有2个选择</p>
+<p>如何在 buttonbox 里边显示图片<br>当你调用一个 buttonbox 函数（例如 msgbox(), ynbox(), indexbox() 等等）的时候，<br>你还可以为关键字参数 image 赋值，可以设置一个 .gif 格式的图像（PNG 格式的图像也支持）</p>
+<p>easygui.buttonbox(‘do you like it’,choices=(‘yes’, ‘no’, ‘a little’),image=’E:\a.gif’)</p>
+<p>#再写图片的地址时，要用2个反斜杠</p>
+<p>让用户输入消息</p>
+<p>enterbox()<br>enterbox(msg=’Enter something.’, title=’ ‘, default=’’, strip=True, image=None, root=None)<br>enterbox() 为用户提供一个最简单的输入框，返回值为用户输入的字符串。<br>默认返回的值会自动去除首尾的空格，如果需要保留首尾空格的话请设置参数 strip=False。</p>
+<p>g.enterbox(‘你的愿望’)</p>
+<p>integerbox()<br>integerbox(msg=’’, title=’ ‘, default=None, lowerbound=0, upperbound=99, image=None, root=None)<br>integerbox() 为用户提供一个简单的输入框，用户只能输入范围内（lowerbound 参数设置最小值，upperbound 参数设置最大值）的整型数值，否则会要求用户重新输入。<br>如果不加参数，直接g.integerbox()，会要求输入0-99的整数，格式正确，返回输入的值，错误，重新输入。</p>
+<p>multenterbox()<br>multenterbox(msg=’Fill in values for the fields.’, title=’ ‘, fields=[], values=[], callback=None, run=True)<br>multenterbox() 为用户提供多个简单的输入框，要注意以下几点：<br>如果用户输入的值比选项少的话，则返回列表中的值用空字符串填充用户为输入的选项。<br>如果用户输入的值比选项多的话，则返回的列表中的值将截断为选项的数量。<br>如果用户取消操作，则返回域中的列表的值或者 None 值。</p>
+<p>g.multenterbox(‘name\npassword’,’登陆’,(‘name’,’password’))#返回的值就是values</p>
+<p>让用户输入密码<br>passwordbox()<br>passwordbox(msg=’Enter your password.’, title=’ ‘, default=’’, image=None, root=None)<br>用户输入的内容用星号（*）显示出来，该函数返回用户输入的字符串</p>
+<p>g.passwordbox(‘输入密码’)</p>
+<p>multpasswordbox()<br>multpasswordbox(msg=’Fill in values for the fields.’, title=’ ‘, fields=(), values=(), callback=None, run=True)<br>可以有多个输入框，最后一个输入框显示为密码的形式（*）</p>
+<p>g.multpasswordbox(‘please input name\npassword’,’登陆’,(‘name’,’password’))</p>
+<p>显示文本<br>textbox()<br>textbox(msg=’’, title=’ ‘, text=’’, codebox=False, callback=None, run=True)<br>textbox() 函数默认会以比例字体（参数 codebox=True 设置为等宽字体）来显示文本<br>内容（自动换行），这个函数适合用于显示一般的书面文字。</p>
+<p>f=open(‘E:\a1.txt’,’r’)<br>g.textbox(‘内容如下：’’显示’,text=f) #显示一个文件的内容，</p>
+<p>g.textbox(‘内容如下：’,’显示’,text=’黑夜给了我黑色的眼睛，而我却用它去寻找光明’)</p>
+<p>#显示text里面的内容</p>
+<p>#如果选择OK，则返回text的值，选择cancel就不反回</p>
+<p>目录与文件<br>GUI 编程中一个常见的场景是要求用户输入目录及文件名，EasyGUI 提供了一些基本函数让用户来浏览文件系统，<br>选择一个目录或文件。</p>
+<p>diropenbox()<br>diropenbox(msg=None, title=None, default=None)<br>diropenbox() 函数用于提供一个对话框，返回用户选择的目录名，如果用户选择 “Cancel” 则返回 None。<br>default 参数用于设置默认的打开目录（请确保设置的目录已存在）。</p>
+<p>g.diropenbox(‘选择一个文件’,’找路径’,default=’E:\‘)</p>
+<p>fileopenbox()<br>fileopenbox(msg=None, title=None, default=’<em>‘, filetypes=None, multiple=False)<br>fileopenbox() 函数用于提供一个对话框，返回用户选择的文件名（带完整路径哦），如果用户选择 “Cancel” 则返回 None。<br>关于 default 参数的设置方法：<br>default 参数指定一个默认路径，通常包含一个或多个通配符。<br>如果设置了 default 参数，fileopenbox() 显示默认的文件路径和格式。<br>default 默认的参数是 ‘</em>‘，即匹配所有格式的文件。<br>例如：<br>default=”E:\<em>.py” 即显示 E:\ 文件夹下所有的 Python 文件。<br>default=”E:\test</em>.py” 即显示 C:\fishc 文件夹下所有的名字以 test 开头的 Python 文件。<br>关于 filetypes 参数的设置方法：<br>可以是包含文件掩码的字符串列表，例如：filetypes = [“<em>.txt”]<br>可以是字符串列表，列表的最后一项字符串是文件类型的描述，例如：filetypes = [“</em>.css”, [“<em>.htm”, “</em>.html”, “HTML files”]]<br>最后是 multiple 参数，如果为 True 则表示可以同时选择多个文件。</p>
+<p>g.fileopenbox(default=’E:\*.py’)#出现的还有目录</p>
+<p>g.fileopenbox(default=’E:\<em>.py’,filetypes=’[</em>.py]’,multiple=’true’)#打开多行文件时要按shif</p>
+<p>filesavebox()<br>filesavebox(msg=None, title=None, default=’’, filetypes=None)<br>filesavebox() 函数提供一个对话框，让用于选择文件需要保存的路径，如果用户选择 “Cancel” 则返回 None。<br>default 参数应该包含一个文件名（例如当前需要保存的文件名），当然也可以设置为空的，或者包含一个文件格式掩码的通配符。</p>
+<p>g.filesavebox(default=’apple’)#并不会有apple这个文件</p>
+<p>g.filesavebox(default=’apple’,filetypes=[‘*.py’]) #文件类型有python这个选项 </p>
+<p>捕获异常<br>当异常出现的时候，exceptionbox() 会将堆栈追踪显示在一个 codebox() 中，并且允许你做进一步的处理。<br> try:<br>        print(‘I Love FishC.com!’)<br>        int(‘FISHC’) # 这里会产生异常<br>except:<br>        g.exceptionbox()</p>
+<p>#会弹出一个codebox，将错误显示出来</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/note_one/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -936,7 +1094,7 @@ f.close()
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
