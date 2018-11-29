@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="异常检测try #try: #检测内容 #except exception[as reason]: #出现异常后处理的代码 #finally: #必须被执行的语句 #制作异常 #raise TypeError #raise TypeError(‘类型错误’) #f=open(“E:\dee.txt”)     #文件名不存在 #print(f.read()) #f.close() #FileNot">
+<meta name="description" content="android-catcher 是一个可以使用 Python 对 Android 设备进行 UI 自动化测试并采集性能数据的库 安装 Python自动化测试的脚本是用 Python 3 写的，要运行脚本需要先安装 Python 3 环境 安装 android-catcher 依赖打开脚本目录执行以下命令，安装依赖 这个网站可以下载https://github.com/Rain0193/androi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记（小甲鱼）">
-<meta property="og:url" content="http://yoursite.com/2018/11/19/note_three/index.html">
+<meta property="og:title" content="手机app的性能测试android-catcher">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/catcher/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="异常检测try #try: #检测内容 #except exception[as reason]: #出现异常后处理的代码 #finally: #必须被执行的语句 #制作异常 #raise TypeError #raise TypeError(‘类型错误’) #f=open(“E:\dee.txt”)     #文件名不存在 #print(f.read()) #f.close() #FileNot">
+<meta property="og:description" content="android-catcher 是一个可以使用 Python 对 Android 设备进行 UI 自动化测试并采集性能数据的库 安装 Python自动化测试的脚本是用 Python 3 写的，要运行脚本需要先安装 Python 3 环境 安装 android-catcher 依赖打开脚本目录执行以下命令，安装依赖 这个网站可以下载https://github.com/Rain0193/androi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-19T04:38:44.747Z">
+<meta property="og:updated_time" content="2018-11-29T03:52:48.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记（小甲鱼）">
-<meta name="twitter:description" content="异常检测try #try: #检测内容 #except exception[as reason]: #出现异常后处理的代码 #finally: #必须被执行的语句 #制作异常 #raise TypeError #raise TypeError(‘类型错误’) #f=open(“E:\dee.txt”)     #文件名不存在 #print(f.read()) #f.close() #FileNot">
+<meta name="twitter:title" content="手机app的性能测试android-catcher">
+<meta name="twitter:description" content="android-catcher 是一个可以使用 Python 对 Android 设备进行 UI 自动化测试并采集性能数据的库 安装 Python自动化测试的脚本是用 Python 3 写的，要运行脚本需要先安装 Python 3 环境 安装 android-catcher 依赖打开脚本目录执行以下命令，安装依赖 这个网站可以下载https://github.com/Rain0193/androi">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/19/note_three/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/29/catcher/">
 
 
 
 
 
-  <title>学习笔记（小甲鱼） | Hexo</title>
+  <title>手机app的性能测试android-catcher | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/note_three/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/catcher/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习笔记（小甲鱼）</h1>
+          <h1 class="post-title" itemprop="name headline">手机app的性能测试android-catcher</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T09:45:16+08:00">
-                2018-11-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-29T11:47:05+08:00">
+                2018-11-29
               </time>
             
 
@@ -299,30 +299,32 @@
       
 
       
-        <p>异常检测try</p>
-<p>#try:</p>
-<pre><code>#检测内容
-</code></pre><p>#except exception[as reason]:</p>
-<pre><code>#出现异常后处理的代码
-</code></pre><p>#finally:</p>
-<pre><code>#必须被执行的语句
-</code></pre><p>#制作异常</p>
-<p>#raise TypeError</p>
-<p>#raise TypeError(‘类型错误’)</p>
-<p>#f=open(“E:\dee.txt”)     #文件名不存在</p>
-<p>#print(f.read())</p>
-<p>#f.close()</p>
-<p>#FileNotFoundError: [Errno 2] No such file or directory: ‘E:\dee.txt’</p>
-<p>try:</p>
-<pre><code>f=open(&quot;E:\\dee.txt&quot;,&apos;w&apos;)
-print(f.write(&apos;hello&apos;))
-a=&apos;i&apos;+1
-f.close()
-</code></pre><p>except OSError as reason:<br>    print(‘文件出错’+str(reason))<br>except TypeError as reason:<br>    print(‘文件出错’+str(reason))<br>finally:<br>    f.close()</p>
-<p>#如果try里面的异常没有出现在except里面，会报错</p>
-<p>#先遇到那个异常，那么就会跳到相应的except去执行，其他的就不会执行了</p>
-<p>#finally后面的语句，无论try中有没有异常，都会执行。</p>
-<p>#except 后边如果不带任何异常类，Python 会捕获所有（try 语句块内）的异常并统一处理</p>
+        <p>android-catcher 是一个可以使用 Python 对 Android 设备进行 UI 自动化测试并采集性能数据的库</p>
+<p>安装 Python<br>自动化测试的脚本是用 Python 3 写的，要运行脚本需要先安装 Python 3 环境</p>
+<p>安装 android-catcher 依赖<br>打开脚本目录执行以下命令，安装依赖</p>
+<p>这个网站可以下载<br><a href="https://github.com/Rain0193/android-catcher" target="_blank" rel="noopener">https://github.com/Rain0193/android-catcher</a></p>
+<p>pip install -r requirements.txt</p>
+<p>#如果直接执行命令，没有下载，可能会提示没有requirements.txt</p>
+<p>uiautomator2 的使用方式<br>安装完 uiautomator2 之后，一般只需要执行以下命令对设备进行初始化，在设备上安装 uiautomator2 服务</p>
+<p>python -m uiautomator2 init<br>设备上会出现uiautomator的图标</p>
+<p>更多的 uiautomator2 的使用方式可参考：<a href="https://github.com/openatx/uiautomator2" target="_blank" rel="noopener">https://github.com/openatx/uiautomator2</a></p>
+<p>脚本文件说明<br>这个脚本库根目录下主要的文件有</p>
+<p>info.py：手机性能信息采集的脚本，其中定义了父类 Info，已实现的子类有 CPUInfo(CPU信息)、MemInfo(内存信息)、FPSInfo(帧率信息)、NetInfo(网络流量信息)，使用者可以从 Info 派生子类来实现自己的采集需求<br>task.py：测试场景的脚本，其中定义了父类 Task，因为没有固定的测试场景，因此使用者需要从 Task 派生子类并重写 Task#execute 方法来自定义的测试场景，自定义方式可参考：<a href="https://github.com/openatx/uiautomator2" target="_blank" rel="noopener">https://github.com/openatx/uiautomator2</a><br>info_task.py：测试场景和采集信息灵活结合的脚本，使用者不需要用到<br>utils.py：工具方法脚本<br><em>main</em>.py：任务运行的入口脚本，当没有具体的测试场景，只是想采集指定时间段的信息，直接运行该脚本</p>
+<p>参数说明<br>-s：必选参数，指定设备号，可通过 adb devices 获取<br>-a：必选参数，要测试进程的 applicationId<br>-f：可选参数，采样间隔，单位为秒，不建议设置太短，最好是大于 0.1s，默认是 1s<br>-d：可选参数，采样持续时间，默认为10s<br>-i：可选参数，需要采集的信息，可以设置多个，目前可选的有四个，分别为 cpu、mem、fps、net，用 “,” 隔开，如 -i cpu,mem,fps,net<br>-o：可选参数，采集到的信息的输出目录，如 “.” 表示当前脚本所在的目录，默认为 “.”</p>
+<p>生成文件说明<br>采集到的信息根据信息类型分别存放在指定输出目录的 cpu_stats、mem_stats、fps_stats、net_stats 四个子目录下，文件名为 信息类型_设备号<em>applicationId</em>版本号<em>测试场景名</em>时间戳，<br>如 cpu_d3c2edaa_video.like_RecordVideo_1.9.9_1524122928.csv.csv</p>
+<p>无自定义测试场景的使用方式<br>适用于没有具体测试场景，在脚本运行之后一段时间内都处于采集状态的情况，持续时间可以通过配置参数指定，过程中使用者可以随意操作手机。通过命令行直接运行 <em>main</em>.py 脚本文件，并指定相关参数<br>比方说我要采集 applicationId 为 video.like 这个应用 10s 内的 cpu 信息和内存信息，采样间隔为 200ms，输出目录为当前目录，那么可以在脚本所在的目录执行以下命令</p>
+<p>python <em>main</em>.py -s 设备号-a video.like -f 0.2 -d 10 -i mem,cpu -o .</p>
+<p>#最后的点不要忘了</p>
+<p>自定义测试场景的使用方式</p>
+<p>自定义测试场景不能直接调用 <em>main</em>.py 脚本，需要创建新的脚本，继承 task.py#Task 并重写 Task#execute 方法，<br>import <em>main</em><br>from task import Task</p>
+<p>class StartAppTask(Task):<br>    def <strong>init</strong>(self,name):<br>        super().<strong>init</strong>(name)</p>
+<pre><code>def execute(self):
+    self.d.app_start(&quot;com.vivo.game&quot;)
+</code></pre><p><em>main</em>.main(StartAppTask(“StartApp”))</p>
+<p>这里创建了名为 start_app.py 的脚本，运行命令：</p>
+<p>python start_app.py -s 设备号-a 进程名 -f 0.1 -i cpu,mem -o .</p>
+<p>就可以启动对应的 APP，并采集 CPU 信息和内存信息，采样间隔为 100ms，输出到当前目录。注意这里没有了 -d 参数，因为采集的持续时间以测试任务的持续时间的持续时间为准，设置的参数一定要按照说明来，<br>否则不能采集到数据 如果想采集自定义的信息，可以继承 info.py#Info 并重写 Info#get_start_info 和 Info#get_end_info 方法，可参考已实现的四种信息采集的写法，最后通过 Task#add_info 方法添加。</p>
+<p>自定义好测试场景之后，调用 <em>main</em>#main 方法，传入测试场景实例，测试场景的名称会作为输出文件命名的一部分，这里最好取能准确表达测试场景的名称，如某个 APP 录制视频测试场景的名称为 RecordVideo<br>采集到的信息可通过 Excel 制成图表，以下是完整录制视频这个测试场景的 CPU 占比和内存的变化</p>
 
       
     </div>
@@ -347,8 +349,8 @@ f.close()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/note_two/" rel="next" title="学习笔记">
-                <i class="fa fa-chevron-left"></i> 学习笔记
+              <a href="/2018/11/23/class/" rel="next" title="类和对象学习笔记（小甲鱼）">
+                <i class="fa fa-chevron-left"></i> 类和对象学习笔记（小甲鱼）
               </a>
             
           </div>
@@ -356,10 +358,6 @@ f.close()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/19/note_one/" rel="prev" title="EasyGUI学习笔记（小甲鱼）">
-                EasyGUI学习笔记（小甲鱼） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
